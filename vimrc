@@ -82,9 +82,6 @@ au BufRead,BufNewFile *.jade set ft=jade syntax=jade
 " Common Ruby files
 au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
 
-" Rainbow Parenthesis
-"nnoremap <leader>rp :RainbowParenthesesToggle<CR>
-
 " Taglist Plus
 let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/'
 let Tlist_WinWidth='auto'
