@@ -1,7 +1,6 @@
 Download and symlink
 
-    git clone https://github.com/mattfield/dotvim.git
+    git clone https://github.com/mattfield/dotvim.git ~/.vim
 
-    mv ~/dotvim ~/.vim
     cd ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
