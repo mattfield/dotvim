@@ -1,6 +1,5 @@
-Download and symlink
+Download and symlink:
 
-    git clone https://github.com/mattfield/dotvim.git ~/.vim
+    git clone https://github.com/mattfield/dotvim.git ~/.vim && cd ~/.vim
 
-    cd ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
