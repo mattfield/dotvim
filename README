@@ -3,3 +3,4 @@ Download and symlink:
     git clone https://github.com/mattfield/dotvim.git ~/.vim && cd ~/.vim
 
     ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/gvimrc ~/.gvimrc
