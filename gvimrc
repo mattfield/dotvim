@@ -1,3 +1,4 @@
 set go-=T " Hide toolbar on launch
 set guioptions=aAce
-set guifont=Menlo:h14:b " Set default font
+set guifont=Monaco:h14:b " Set default font
+colorscheme codeschool
