@@ -5,6 +5,7 @@ call pathogen#infect()
 syntax on
 filetype plugin on
 filetype plugin indent on
+set foldmethod=manual
 set nofoldenable
 set nocompatible
 set nobackup
