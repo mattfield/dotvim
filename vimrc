@@ -74,6 +74,9 @@ augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
 augroup END
 
+" SASS
+autocmd FileType sass setlocal shiftwidth=2 tabstop=2
+
 " JSON
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
 
@@ -86,6 +89,12 @@ au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt s
 " Taglist Plus
 let Tlist_WinWidth='auto'
 nnoremap <leader>l :TlistToggle<CR>
+
+" Ctrlp
+let g:ctrlp_working_path_mode = 2
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+set wildignore+=tmp\*,*.swp,*.zip,*.exe   " Windows
 
 " ,+n toggles the nerdtree
 map <leader>n :NERDTreeToggle<CR>
