@@ -1,4 +1,4 @@
-" Make vim more useful
+" Make vim more useful (i.e. not like vi)
 set nocompatible
 
 call pathogen#infect()
@@ -27,8 +27,7 @@ set undodir=~/.vim/undo
 " syntax highligting
 syntax enable
 set background=dark
-set t_Co=256
-colorscheme badwolf
+colorscheme solarized
 
 " quiet pls
 set visualbell t_vb=
@@ -51,6 +50,7 @@ set incsearch " Highlight dynamically as pattern is typed.
 set laststatus=2 " Always show status line
 set nostartofline " Don't reset cursor to start of line when moving around.
 set ruler " Show the cursor position
+set clipboard=unnamed
 set showmode " Show the current mode.
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
 set title " Show the filename in the window titlebar.
@@ -60,7 +60,6 @@ set wildmenu " Hitting TAB in command mode will show possible completions above 
 " hi User1 guibg=#455354 guifg=fg      ctermbg=238 ctermfg=fg  gui=bold,underline cterm=bold,underline term=bold,underline
 " hi User2 guibg=#455354 guifg=#CC4329 ctermbg=238 ctermfg=196 gui=bold           cterm=bold           term=bold
 set statusline=[%n]\ %1*%<%.99t%*\ %2*%h%w%m%r%*%y[%{&ff}→%{strlen(&fenc)?&fenc:'No\ Encoding'}]%=%-16(\ L%l,C%c\ %)%P
-"let g:Powerline_symbols = 'fancy'
 
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
@@ -85,6 +84,7 @@ au BufRead,BufNewFile *.jade set ft=jade syntax=jade
 
 " Common Ruby files
 au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
 " Taglist Plus
 let Tlist_WinWidth='auto'
@@ -93,8 +93,8 @@ nnoremap <leader>l :TlistToggle<CR>
 " Ctrlp
 let g:ctrlp_working_path_mode = 2
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
-set wildignore+=tmp\*,*.swp,*.zip,*.exe   " Windows
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " ,+n toggles the nerdtree
 map <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
