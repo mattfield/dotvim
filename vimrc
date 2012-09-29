@@ -26,7 +26,7 @@ set undodir=~/.vim/undo
 
 " syntax highligting
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 " quiet pls
