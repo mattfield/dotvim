@@ -50,7 +50,11 @@ set incsearch " Highlight dynamically as pattern is typed.
 set laststatus=2 " Always show status line
 set nostartofline " Don't reset cursor to start of line when moving around.
 set ruler " Show the cursor position
-set clipboard=unnamed
+
+if $TMUX == '' 
+    set clipboard+=unnamed
+endif
+
 set showmode " Show the current mode.
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
 set title " Show the filename in the window titlebar.
@@ -76,6 +80,9 @@ augroup END
 " SASS
 autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 
+" CoffeeScript
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
+
 " JSON
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
 
@@ -98,3 +105,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 " ,+n toggles the nerdtree
 map <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
+
+" ,+ws removes all blank lines
+map <leader>ws :g/^\s*$/d<CR>
