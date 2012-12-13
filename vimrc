@@ -41,7 +41,6 @@ set ts=4
 set sw=4
 
 " Set some junk
-set autoindent " Copy indent from last line when starting new line.
 set backspace=indent,eol,start
 set cursorline " Highlight current line
 set hlsearch " Highlight searches
