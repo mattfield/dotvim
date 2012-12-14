@@ -26,8 +26,9 @@ set undodir=~/.vim/undo
 
 " syntax highligting
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
+let g:solarized_termcolors=256
 
 " quiet pls
 set visualbell t_vb=

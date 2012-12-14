@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/brianl/Repo/callback-js'
-let g:netrw_dirhist_2='/Users/brianl/Repo/callback-js/build'
-let g:netrw_dirhist_3='/Users/mattfield/localhost/latest_simpl_build/support'
-let g:netrw_dirhist_4='/Users/mattfield/.vim/.git/info'
-let g:netrw_dirhist_5='/Users/mattfield/Desktop/dev/Bacardi/.git'
-let g:netrw_dirhist_6='/Users/mattfield/.vim'
-let g:netrw_dirhist_7='/Users/mattfield/Desktop/dev/WCC/assets/css'
-let g:netrw_dirhist_8='/Users/mattfield/Desktop/dev/WCC/assets'
-let g:netrw_dirhist_9='/Users/mattfield/Desktop/dev/WCC'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/mattfield/.oh-my-zsh'
