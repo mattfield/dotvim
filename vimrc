@@ -83,6 +83,9 @@ autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 " CoffeeScript
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 
+" JS
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
 " JSON
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
 
