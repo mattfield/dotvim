@@ -25,6 +25,7 @@ set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
 " syntax highligting
+set t_Co=256
 syntax enable
 set background=dark
 colorscheme solarized
@@ -37,8 +38,8 @@ set number
 
 " 4 space softabs default
 set expandtab
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 
 " Set some junk
 set backspace=indent,eol,start
@@ -60,9 +61,12 @@ set title " Show the filename in the window titlebar.
 set wildmenu " Hitting TAB in command mode will show possible completions above command line.
 
 " Status Line
-" hi User1 guibg=#455354 guifg=fg      ctermbg=238 ctermfg=fg  gui=bold,underline cterm=bold,underline term=bold,underline
-" hi User2 guibg=#455354 guifg=#CC4329 ctermbg=238 ctermfg=196 gui=bold           cterm=bold           term=bold
+hi User1 guibg=#455354 guifg=fg      ctermbg=238 ctermfg=fg  gui=bold,underline cterm=bold,underline term=bold,underline
+hi User2 guibg=#455354 guifg=#CC4329 ctermbg=238 ctermfg=196 gui=bold           cterm=bold           term=bold
 set statusline=[%n]\ %1*%<%.99t%*\ %2*%h%w%m%r%*%y[%{&ff}→%{strlen(&fenc)?&fenc:'No\ Encoding'}]%=%-16(\ L%l,C%c\ %)%P
+
+" Highlight column 80
+set colorcolumn=80
 
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
@@ -78,6 +82,9 @@ augroup END
 
 " SASS
 autocmd FileType sass setlocal shiftwidth=2 tabstop=2
+
+" HTML
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
 
 " CoffeeScript
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
@@ -105,5 +112,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 map <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 
-" ,+ws removes all blank lines
+" <leader>ws removes all blank lines
 map <leader>ws :g/^\s*$/d<CR>
+
+" <leader>/ kills highlighted search
+map <leader>/ :nohls<CR>
