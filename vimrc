@@ -27,7 +27,6 @@ set undodir=~/.vim/undo
 " syntax highligting
 set t_Co=256
 syntax enable
-set background=dark
 colorscheme solarized
 
 " quiet pls
@@ -88,6 +87,9 @@ autocmd FileType html setlocal shiftwidth=4 tabstop=4
 
 " CoffeeScript
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
+
+" JS
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " JSON
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
