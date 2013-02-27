@@ -35,11 +35,11 @@
 "
 " * To get more contrast to the Visual selection, use
 "   
-"     let g:darkburn_alternate_Visual = 1
+     let g:darkburn_alternate_Visual = 1
 " 
 " * To use alternate colouring for Error message, use
 "     
-      let g:darkburn_alternate_Error = 1
+     let g:darkburn_alternate_Error = 1
 "
 " * The new default for Include is a duller orange. To use the original
 "   colouring for Include, use
@@ -54,7 +54,7 @@
 "
 " * To turn the parameter(s) back to defaults, use UNLET:
 "
-"      unlet g:darkburn_alternate_Include
+      unlet g:darkburn_alternate_Include
 "
 "   Setting to 0 won't work!
 "
@@ -106,7 +106,7 @@ hi PreCondit       guifg=#dfaf8f gui=bold
 hi PreProc         guifg=#ffb23f gui=bold
 hi Question        guifg=#ffffff gui=bold
 hi Repeat          guifg=#ffd7a7 gui=bold
-hi Search          guifg=#ffffe0 guibg=#284f28
+hi Search          guifg=#000000 guibg=#ffffff
 hi SpecialChar     guifg=#9fbfd6 gui=bold
 hi SpecialComment  guifg=#82a282 gui=bold
 hi Special         guifg=#9fbfd6
@@ -156,7 +156,7 @@ if &t_Co > 255
     hi Folded          ctermfg=109   ctermbg=238    
     hi Function        ctermfg=228  
     hi Identifier      ctermfg=223  
-    hi IncSearch       ctermbg=228   ctermfg=238    
+    hi IncSearch       ctermbg=0   ctermfg=109
     hi Keyword         ctermfg=223   cterm=bold
     hi Label           ctermfg=187   cterm=underline
     hi LineNr          ctermfg=248   ctermbg=235    
@@ -170,7 +170,7 @@ if &t_Co > 255
     hi PreProc         ctermfg=223   cterm=bold
     hi Question        ctermfg=15    cterm=bold
     hi Repeat          ctermfg=223   cterm=bold
-    hi Search          ctermfg=230   ctermbg=236    
+    hi Search          ctermfg=0   ctermbg=109
     hi SpecialChar     ctermfg=181   cterm=bold
     hi SpecialComment  ctermfg=108   cterm=bold
     hi Special         ctermfg=181  
