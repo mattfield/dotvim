@@ -24,6 +24,12 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
+" Not for the faint-of-heart
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " syntax highligting
 set t_Co=256
 let g:zenburn_alternate_Error = 1
@@ -52,13 +58,13 @@ set laststatus=2 " Always show status line
 set nostartofline " Don't reset cursor to start of line when moving around.
 set ruler " Show the cursor position
 
+" Make sure tmux and system clipboard play nice
 if $TMUX == '' 
     set clipboard+=unnamed
 endif
 
 set showmode " Show the current mode.
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
-set title " Show the filename in the window titlebar.
 set wildmenu " Hitting TAB in command mode will show possible completions above command line.
 
 " Status Line
@@ -102,6 +108,7 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
 " Taglist Plus
 let Tlist_WinWidth='auto'
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 nnoremap <leader>l :TlistToggle<CR>
 
 " Ctrlp
