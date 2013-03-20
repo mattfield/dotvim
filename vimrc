@@ -76,6 +76,9 @@ set statusline=[%n]\ %1*%<%.99t%*\ %2*%h%w%m%r%*%y[%{&ff}→%{strlen(&fenc)?&fen
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
+" Because Vim isn't hard enough
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
 " Search and replace word under cursor (,*)
 :nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 
