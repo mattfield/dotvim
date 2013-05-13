@@ -100,6 +100,12 @@ au BufRead,BufNewFile *.jade set ft=jade syntax=jade
 au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
+" Haskell
+au BufEnter *.hs compiler ghc
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
+let g:haddock_docdir = "/usr/local/Cellar/ghc/7.4.2/lib/"
+
 " Taglist Plus
 let Tlist_WinWidth='auto'
 nnoremap <leader>l :TlistToggle<CR>
