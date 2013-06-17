@@ -24,7 +24,10 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
-" Not for the faint-of-heart
+" Get rid of the delay when hitting esc!
+set noesckeys
+
+" Get off my lawn!
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -37,7 +40,7 @@ let g:zenburn_high_Contrast = 1
 let g:zenburn_old_Visual = 1
 colorscheme zenburn
 
-" quiet pls
+" Quit yo jibber-jabber, foo'
 set visualbell t_vb=
 
 " turn on line numbers
