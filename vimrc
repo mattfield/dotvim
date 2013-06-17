@@ -60,10 +60,7 @@ set ruler " Show the cursor position
 set splitbelow " Split behaviour that actually makes sense
 set splitright
 
-" Make sure tmux and system clipboard play nice
-if $TMUX == '' 
-    set clipboard+=unnamed
-endif
+set clipboard=unnamed
 
 set showmode " Show the current mode.
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
@@ -113,7 +110,7 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
 " Taglist Plus
 let Tlist_WinWidth='auto'
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let Tlist_Ctags_Cmd='/opt/boxen/homebrew/bin/ctags'
 nnoremap <leader>l :TlistToggle<CR>
 
 " Ctrlp
