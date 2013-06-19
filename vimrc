@@ -24,6 +24,15 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
+" Get rid of the delay when hitting esc!
+set noesckeys
+
+" Get off my lawn!
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " syntax highligting
 set t_Co=256
 let g:zenburn_alternate_Error = 1
@@ -31,7 +40,7 @@ let g:zenburn_high_Contrast = 1
 let g:zenburn_old_Visual = 1
 colorscheme zenburn
 
-" quiet pls
+" Quit yo jibber-jabber, foo'
 set visualbell t_vb=
 
 " turn on line numbers
@@ -51,14 +60,13 @@ set incsearch " Highlight dynamically as pattern is typed.
 set laststatus=2 " Always show status line
 set nostartofline " Don't reset cursor to start of line when moving around.
 set ruler " Show the cursor position
+set splitbelow " Split behaviour that actually makes sense
+set splitright
 
-if $TMUX == '' 
-    set clipboard+=unnamed
-endif
+set clipboard=unnamed
 
 set showmode " Show the current mode.
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
-set title " Show the filename in the window titlebar.
 set wildmenu " Hitting TAB in command mode will show possible completions above command line.
 
 " Status Line
@@ -69,6 +77,9 @@ set statusline=[%n]\ %1*%<%.99t%*\ %2*%h%w%m%r%*%y[%{&ff}→%{strlen(&fenc)?&fen
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+
+" Because Vim isn't hard enough
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Search and replace word under cursor (,*)
 :nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
@@ -108,6 +119,7 @@ let g:haddock_docdir = "/usr/local/Cellar/ghc/7.4.2/lib/"
 
 " Taglist Plus
 let Tlist_WinWidth='auto'
+let Tlist_Ctags_Cmd='/opt/boxen/homebrew/bin/ctags'
 nnoremap <leader>l :TlistToggle<CR>
 
 " Ctrlp
