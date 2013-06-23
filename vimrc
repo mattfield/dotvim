@@ -43,8 +43,8 @@ colorscheme zenburn
 " Quit yo jibber-jabber, foo'
 set visualbell t_vb=
 
-" turn on line numbers
-set number
+" turn on relative line numbers
+set relativenumber
 
 " 4 space softabs default
 set expandtab
@@ -63,7 +63,7 @@ set ruler " Show the cursor position
 set splitbelow " Split behaviour that actually makes sense
 set splitright
 
-set clipboard=unnamed
+set clipboard+=unnamed
 
 set showmode " Show the current mode.
 set scrolloff=3 " Start scrolling three lines before horizontal border of window.
