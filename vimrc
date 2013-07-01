@@ -43,9 +43,6 @@ colorscheme zenburn
 " Quit yo jibber-jabber, foo'
 set visualbell t_vb=
 
-" turn on relative line numbers
-set relativenumber
-
 " 4 space softabs default
 set expandtab
 set ts=2
