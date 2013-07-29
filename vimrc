@@ -16,8 +16,9 @@ set nowrap
 " Proper encoding
 set encoding=utf-8
 
-" Change mapleader
+" Change mapleader and localleader
 let mapleader=","
+let maplocalleader=","
 
 " Local dirs
 set backupdir=~/.vim/backups
@@ -133,3 +134,26 @@ map <leader>ws :g/^\s*$/d<CR>
 
 " <leader>/ kills highlighted search
 map <leader>/ :nohls<CR>
+
+" VimClojure
+" Indent using fuzzy matching
+let vimclojure#FuzzyIndent = 1
+
+" Highlight built-in functions from clojure.core
+let vimclojure#HighlightBuiltins = 1
+
+" Highlight functions from contrib
+let vimclojure#HighlightContrib=1
+
+" As new symbols are identified using VimClojure's dynamic features,
+" automatically highlight them.
+let vimclojure#DynamicHighlighting=1
+
+" Color parens so they're easier to match visually
+let vimclojure#ParenRainbow=1
+
+" Yes, I want nailgun support
+let vimclojure#WantNailgun = 1
+
+" Full path to the nailgun client
+let vimclojure#NailgunClient = "/usr/local/bin/ng"
