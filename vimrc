@@ -137,23 +137,23 @@ map <leader>/ :nohls<CR>
 
 " VimClojure
 " Indent using fuzzy matching
-let vimclojure#FuzzyIndent = 1
+"let vimclojure#FuzzyIndent = 1
 
 " Highlight built-in functions from clojure.core
-let vimclojure#HighlightBuiltins = 1
+" let vimclojure#HighlightBuiltins = 1
 
 " Highlight functions from contrib
-let vimclojure#HighlightContrib=1
+" let vimclojure#HighlightContrib=1
 
 " As new symbols are identified using VimClojure's dynamic features,
 " automatically highlight them.
-let vimclojure#DynamicHighlighting=1
+" let vimclojure#DynamicHighlighting=1
 
 " Color parens so they're easier to match visually
-let vimclojure#ParenRainbow=1
+" let vimclojure#ParenRainbow=1
 
 " Yes, I want nailgun support
-let vimclojure#WantNailgun = 1
+" let vimclojure#WantNailgun = 1
 
 " Full path to the nailgun client
-let vimclojure#NailgunClient = "/usr/local/bin/ng"
+" let vimclojure#NailgunClient = "/usr/local/bin/ng"
