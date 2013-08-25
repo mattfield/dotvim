@@ -165,5 +165,4 @@ map <leader>gc :Gcommit<CR>
 " Full path to the nailgun client
 " let vimclojure#NailgunClient = "/usr/local/bin/ng"
 "
-let g:airline_powerline_fonts = 0
 let g:bufferline_echo = 0
