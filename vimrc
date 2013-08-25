@@ -78,6 +78,7 @@ nnoremap <C-y> 3<C-y>
 
 " Because Vim isn't hard enough
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Search and replace word under cursor (,*)
 :nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
@@ -135,6 +136,12 @@ map <leader>ws :g/^\s*$/d<CR>
 " <leader>/ kills highlighted search
 map <leader>/ :nohls<CR>
 
+" <leader>gst -> Gstatus
+map <leader>gst :Gstatus<CR>
+
+" <leader>gc -> Gcommit
+map <leader>gc :Gcommit<CR>
+
 " VimClojure
 " Indent using fuzzy matching
 "let vimclojure#FuzzyIndent = 1
@@ -157,3 +164,6 @@ map <leader>/ :nohls<CR>
 
 " Full path to the nailgun client
 " let vimclojure#NailgunClient = "/usr/local/bin/ng"
+"
+let g:airline_powerline_fonts = 0
+let g:bufferline_echo = 0
