@@ -60,6 +60,7 @@ set nostartofline " Don't reset cursor to start of line when moving around.
 set ruler " Show the cursor position
 set splitbelow " Split behaviour that actually makes sense
 set splitright
+set nu
 
 set clipboard+=unnamed
 
