@@ -44,7 +44,7 @@ colorscheme zenburn
 " Quit yo jibber-jabber, foo'
 set visualbell t_vb=
 
-" 4 space softabs default
+" 2 space softabs default
 set expandtab
 set ts=2
 set sw=2
