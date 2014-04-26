@@ -2,6 +2,7 @@
 set nocompatible
 
 call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
 syntax on
 filetype plugin on
 filetype plugin indent on
@@ -26,7 +27,8 @@ set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
 " Get rid of the delay when hitting esc!
-set noesckeys
+set esckeys
+set timeoutlen=1000 ttimeoutlen=0
 
 " Get off my lawn!
 noremap <Up> <NOP>
@@ -36,7 +38,7 @@ noremap <Right> <NOP>
 
 " syntax highligting
 set t_Co=256
-let g:zenburn_alternate_Error = 1
+let g:zenburn_alternate_Error = 2
 let g:zenburn_high_Contrast = 1
 let g:zenburn_old_Visual = 1
 colorscheme zenburn
@@ -60,7 +62,6 @@ set nostartofline " Don't reset cursor to start of line when moving around.
 set ruler " Show the cursor position
 set splitbelow " Split behaviour that actually makes sense
 set splitright
-set nu
 
 set clipboard+=unnamed
 
@@ -76,10 +77,6 @@ set wildmenu " Hitting TAB in command mode will show possible completions above 
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
-
-" Because Vim isn't hard enough
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Search and replace word under cursor (,*)
 :nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
@@ -143,27 +140,7 @@ map <leader>gst :Gstatus<CR>
 " <leader>gc -> Gcommit
 map <leader>gc :Gcommit<CR>
 
-" VimClojure
-" Indent using fuzzy matching
-"let vimclojure#FuzzyIndent = 1
+" LiveScript
+au BufNewFile,BufReadPost *.ls setl shiftwidth=2
 
-" Highlight built-in functions from clojure.core
-" let vimclojure#HighlightBuiltins = 1
-
-" Highlight functions from contrib
-" let vimclojure#HighlightContrib=1
-
-" As new symbols are identified using VimClojure's dynamic features,
-" automatically highlight them.
-" let vimclojure#DynamicHighlighting=1
-
-" Color parens so they're easier to match visually
-" let vimclojure#ParenRainbow=1
-
-" Yes, I want nailgun support
-" let vimclojure#WantNailgun = 1
-
-" Full path to the nailgun client
-" let vimclojure#NailgunClient = "/usr/local/bin/ng"
-"
 let g:bufferline_echo = 0
