@@ -81,11 +81,6 @@ nnoremap <C-y> 3<C-y>
 " Search and replace word under cursor (,*)
 :nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 
-" Markdown
-augroup mkd
-  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
-augroup END
-
 " SASS
 autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 
@@ -103,6 +98,9 @@ au BufRead,BufNewFile *.json set ft=json syntax=javascript
 
 " Jade
 au BufRead,BufNewFile *.jade set ft=jade syntax=jade
+
+" LiveScript
+au BufNewFile,BufReadPost *.ls setl shiftwidth=2
 
 " Common Ruby files
 au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
@@ -139,8 +137,5 @@ map <leader>gst :Gstatus<CR>
 
 " <leader>gc -> Gcommit
 map <leader>gc :Gcommit<CR>
-
-" LiveScript
-au BufNewFile,BufReadPost *.ls setl shiftwidth=2
 
 let g:bufferline_echo = 0
