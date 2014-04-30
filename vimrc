@@ -29,6 +29,7 @@ set undodir=~/.vim/undo
 " Get rid of the delay when hitting esc!
 set esckeys
 set timeoutlen=1000 ttimeoutlen=0
+let g:bufferline_echo = 0
 
 " Get off my lawn!
 noremap <Up> <NOP>
@@ -114,7 +115,7 @@ let g:haddock_docdir = "/usr/local/Cellar/ghc/7.4.2/lib/"
 
 " Taglist Plus
 let Tlist_WinWidth='auto'
-let Tlist_Ctags_Cmd='/opt/boxen/homebrew/bin/ctags'
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
 nnoremap <leader>l :TlistToggle<CR>
 
 " Ctrlp
@@ -137,5 +138,3 @@ map <leader>gst :Gstatus<CR>
 
 " <leader>gc -> Gcommit
 map <leader>gc :Gcommit<CR>
-
-let g:bufferline_echo = 0
