@@ -6,9 +6,7 @@ call pathogen#runtime_append_all_bundles()
 syntax on
 filetype plugin on
 filetype plugin indent on
-set foldmethod=manual
 set nofoldenable
-set nocompatible
 set nobackup
 set nowb
 set noswapfile
@@ -71,22 +69,27 @@ set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set wildmenu " Hitting TAB in command mode will show possible completions above command line.
 
 " Status Line
-"hi User1 guibg=#455354 guifg=fg      ctermbg=238 ctermfg=fg  gui=bold,underline cterm=bold,underline term=bold,underline
+hi User1 guibg=#455354 guifg=fg      ctermbg=238 ctermfg=fg  gui=bold,underline cterm=bold,underline term=bold,underline
 "hi User2 guibg=#455354 guifg=#CC4329 ctermbg=238 ctermfg=196 gui=bold           cterm=bold           term=bold
-"set statusline=[%n]\ %1*%<%.99t%*\ %2*%h%w%m%r%*%y[%{&ff}→%{strlen(&fenc)?&fenc:'No\ Encoding'}]%=%-16(\ L%l,C%c\ %)%P
+set statusline=%<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\%=%-16(\ %l,%c-%v\ %)%P
+"let &statusline='%<%f%{&mod?"[+]":""}%r%{&fenc !~ "^$\\|utf-8" || &bomb ? "[".&fenc.(&bomb?"-bom":"")."]" : ""}%=%15.(%l,%c%V %P%)'
 
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
+" Show trailing whitespace
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
 " Search and replace word under cursor (,*)
-:nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
+nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 
 " SASS
 autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 
 " HTML
-autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " CoffeeScript
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
@@ -107,21 +110,10 @@ au BufNewFile,BufReadPost *.ls setl shiftwidth=2
 au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
-" Haskell
-au BufEnter *.hs compiler ghc
-let g:haddock_browser = "open"
-let g:haddock_browser_callformat = "%s %s"
-let g:haddock_docdir = "/usr/local/Cellar/ghc/7.4.2/lib/"
-
-" Taglist Plus
-let Tlist_WinWidth='auto'
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
-nnoremap <leader>l :TlistToggle<CR>
-
 " Ctrlp
 let g:ctrlp_working_path_mode = 2
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
 " ,+n toggles the nerdtree
 map <leader>n :NERDTreeToggle<CR>
@@ -131,10 +123,7 @@ let g:NERDTreeWinPos = "right"
 map <leader>ws :g/^\s*$/d<CR>
 
 " <leader>/ kills highlighted search
-map <leader>/ :nohls<CR>
+map <leader>/ :nohl<CR>
 
-" <leader>gst -> Gstatus
-map <leader>gst :Gstatus<CR>
-
-" <leader>gc -> Gcommit
-map <leader>gc :Gcommit<CR>
+" General useful leader commands
+map <leader>pn :vs ~/dev/project-notes.txt<CR>
