@@ -69,9 +69,9 @@ set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set wildmenu " Hitting TAB in command mode will show possible completions above command line.
 
 " Status Line
-hi User1 guibg=#455354 guifg=fg      ctermbg=238 ctermfg=fg  gui=bold,underline cterm=bold,underline term=bold,underline
+hi User1 guibg=bg guifg=fg      ctermbg=bg ctermfg=fg  gui=bold cterm=bold term=bold
 "hi User2 guibg=#455354 guifg=#CC4329 ctermbg=238 ctermfg=196 gui=bold           cterm=bold           term=bold
-set statusline=%<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\%=%-16(\ %l,%c-%v\ %)%P
+set statusline=%1*%<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\%=%-16(\ %l,%c-%v\ %)%P
 "let &statusline='%<%f%{&mod?"[+]":""}%r%{&fenc !~ "^$\\|utf-8" || &bomb ? "[".&fenc.(&bomb?"-bom":"")."]" : ""}%=%15.(%l,%c%V %P%)'
 
 " Speed up viewport scrolling
