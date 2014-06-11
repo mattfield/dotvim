@@ -3,7 +3,6 @@ set nocompatible
 
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
-syntax on
 filetype plugin on
 filetype plugin indent on
 set nofoldenable
@@ -40,7 +39,9 @@ set t_Co=256
 let g:zenburn_alternate_Error = 2
 let g:zenburn_high_Contrast = 1
 let g:zenburn_old_Visual = 1
+"set background=light
 colorscheme zenburn
+syntax on
 
 " Quit yo jibber-jabber, foo'
 set visualbell t_vb=
@@ -69,7 +70,7 @@ set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set wildmenu " Hitting TAB in command mode will show possible completions above command line.
 
 " Status Line
-hi User1 guibg=bg guifg=fg      ctermbg=bg ctermfg=fg  gui=bold cterm=bold term=bold
+hi User1 guibg=bg guifg=fg term=bold
 "hi User2 guibg=#455354 guifg=#CC4329 ctermbg=238 ctermfg=196 gui=bold           cterm=bold           term=bold
 set statusline=%1*%<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}\%=%-16(\ %l,%c-%v\ %)%P
 "let &statusline='%<%f%{&mod?"[+]":""}%r%{&fenc !~ "^$\\|utf-8" || &bomb ? "[".&fenc.(&bomb?"-bom":"")."]" : ""}%=%15.(%l,%c%V %P%)'
@@ -78,9 +79,13 @@ set statusline=%1*%<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatu
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
+" Tab/Shift-Tab for autocomplete
+imap <TAB> <C-n>
+imap <S-TAB> <C-p>
+
 " Show trailing whitespace
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=tab:>.,trail:.,nbsp:.
 
 " Search and replace word under cursor (,*)
 nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
@@ -126,4 +131,4 @@ map <leader>ws :g/^\s*$/d<CR>
 map <leader>/ :nohl<CR>
 
 " General useful leader commands
-map <leader>pn :vs ~/dev/project-notes.txt<CR>
+map <leader>pn :vs ~/src/project-notes.md<CR>

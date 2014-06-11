@@ -1,4 +1,4 @@
-color codeschool
+color github
 let g:NERDTreeWinPos = "right"
 set guioptions-=T " Hide toolbar on launch
 set guioptions-=r
