@@ -94,3 +94,9 @@
 [submodule "bundle/vim-ps1"]
 	path = bundle/vim-ps1
 	url = git@github.com:PProvost/vim-ps1.git
+[submodule "bundle/puppet"]
+	path = bundle/puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "bundle/terraform"]
+	path = bundle/terraform
+	url = https://github.com/hashivim/vim-terraform.git
