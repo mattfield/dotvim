@@ -100,3 +100,12 @@
 [submodule "bundle/terraform"]
 	path = bundle/terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "bundle/vim-fireplace"]
+	path = bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static
+[submodule "bundle/rainbow-parens"]
+	path = bundle/rainbow-parens
+	url = https://github.com/kien/rainbow_parentheses.vim
