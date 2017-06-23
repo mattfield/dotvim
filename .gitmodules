@@ -67,3 +67,12 @@
 [submodule "bundle/scala"]
 	path = bundle/scala
 	url = git@github.com:derekwyatt/vim-scala.git
+[submodule "bundle/vimshell"]
+	path = bundle/vimshell
+	url = git@github.com:Shougo/vimshell.vim.git
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/unite.vom"]
+	path = bundle/unite.vom
+	url = git@github.com:Shougo/unite.vim.git
