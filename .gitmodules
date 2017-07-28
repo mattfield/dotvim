@@ -55,9 +55,6 @@
 [submodule "bundle/puppet"]
 	path = bundle/puppet
 	url = https://github.com/rodjek/vim-puppet.git
-[submodule "bundle/terraform"]
-	path = bundle/terraform
-	url = https://github.com/hashivim/vim-terraform.git
 [submodule "bundle/vim-hcl"]
 	path = bundle/vim-hcl
 	url = https://github.com/b4b4r07/vim-hcl.git
